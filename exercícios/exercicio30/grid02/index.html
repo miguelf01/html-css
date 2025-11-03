@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <title>propriedade grid na prática</title>
+    <style>
+      body {
+        background: rgba(36, 34, 34, 0.904);
+        color: white;
+        font-size: 2em;
+        height: 860px;
+      }
+
+      .container {
+        height:50%;
+
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      #caixa01 {
+        grid-row-start: -4;
+        grid-row-end: -3;
+        grid-column-start: -5;
+        grid-column-end: -1;
+
+        background: blue;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #caixa02 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+        background: red;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #caixa03 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 5;
+
+        background: green;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item {
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" id="caixa01">caixa01</div>
+      <div class="item" id="caixa02">caixa02</div>
+      <div class="item" id="caixa03">caixa03</div>
+    </div>
+  </body>
+</html>

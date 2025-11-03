@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <title>propriedade grid na prática</title>
+    <style>
+      body {
+        background: rgba(36, 34, 34, 0.904);
+        color: white;
+        font-size: 2em;
+        height: 860px;
+      }
+
+      .container {
+        height:100%;
+        border: 3px solid rgba(0, 0, 0, 0.648);
+        display: grid;
+        /* grid-template-columns: auto auto auto; */
+        /* esses dois podem ser esse */
+        grid-template: /* repeat(3, 100px) */ auto 170px 30% 1fr / repeat(2, 1fr) 535px /* igualmente dividindo a largura é 345px */ 40%;
+        /* lembrando que primeiro vem row e depois column */
+        /* grid-template-rows: 100px 100px 100px; */
+        gap: 10px;
+
+        /* align-items: normal;  */
+        /* esse dois ( de baixo de de cima são place-item) */
+        /* justify-items: normal; */
+        place-items: stretch center;
+        /* align-content: start; */
+        /* esse dois ( de baixo de de cima são place-content) */
+        place-content: start end;
+        /* justify-content: end; */
+      }
+
+      .item {
+        padding: 5px;
+        background: blue;
+        border: 2px solid rgba(255, 88, 88, 0.841);
+        text-align: center;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">a</div>
+      <div class="item">b</div>
+      <div class="item">c</div>
+      <div class="item">d</div>
+      <div class="item">e</div>
+      <div class="item">f</div>
+      <div class="item">g</div>
+    </div>
+  </body>
+</html>
