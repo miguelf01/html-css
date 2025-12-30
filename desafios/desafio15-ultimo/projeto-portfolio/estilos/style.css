@@ -25,18 +25,19 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     line-height: 1.5em;
     background: var(--fundo-principal);
     color: var(--texto);
 }
 
 header {
-    background: var(--destaque);
-    color: var(--texto);
-    padding: 10px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-content: center;
+    background: var(--destaque);
+    color: var(--texto);
+    padding: 10px;    
     position: sticky;
     top: 0;
     z-index: 1;
@@ -52,9 +53,9 @@ header {
     text-decoration: none;
     color: var(--texto-inverso);
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 12px 15px;
     border-radius: 5px;
-    transition: background 0.5s, color 0.5s;
+    transition: background .5s, color .5s;
 }
 
 .menu a:hover {
@@ -82,11 +83,11 @@ main {
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
+    margin-bottom: 15px;
     border: 5px solid var(--fundo-card);
     outline: 5px solid var(--destaque);
     display: block;
-    text-align: left;
-    margin-bottom: 15px;
+    margin: auto;
 }
 
 #ficha h1 {
@@ -101,7 +102,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 1.6em; 
-    gap: 1em;
+    gap: 15px;
     margin-top: 15px;
 }
 
@@ -148,7 +149,7 @@ article h2 {
 
 .skill-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 
@@ -178,7 +179,7 @@ article h2 {
 .skill-container .progresso {
     height: 100%;
     background: var(--destaque-inverso);
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 4px;
 }
 
 .formacao-container {
@@ -215,7 +216,6 @@ article h2 {
 .projeto-container {
     display: flex;
     flex-direction: column-reverse;
-    gap: 20px;
 }
 
 .projeto-container .projeto {
@@ -223,7 +223,6 @@ article h2 {
     flex-direction: column;
     gap: 15px;
     background: var(--fundo-principal);
-    margin: 10px;
     padding: 10px;
     border-radius: 8px;
     border-left: 5px solid var(--destaque-inverso);
@@ -255,30 +254,13 @@ footer a {
     color: var(--texto-inverso);
     text-decoration: none;
     font-weight: bold;
-    transition: color .5s;
 }
 
 footer a:hover {
     color: var(--destaque-inverso);
-    
 }
 
 @media screen and (min-width: 768px) {
-    main {
-        grid-template-columns: auto 300px 1fr auto;
-    }
-
-    #ficha {
-        grid-column: 2 / 3;
-        height: fit-content;
-        position: sticky;
-        top: 120px;
-    }
-
-    .detalhes {
-        grid-column: 3 / 4;
-    }
-
     .skill-container {
         grid-template-columns: 1fr 1fr;
     }

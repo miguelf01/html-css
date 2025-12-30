@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="lg:bg-[--main-color] flex items-center justify-center"> <!-- lg = large = min width de 1024 -->
+<div>
+    <div class="main min-w-[521px] max-w-[1200px] m-10 p-10 lg:bg-blue-600 md:bg-purple-500 sm:bg-blue-600 flex flex-col items-center"> <!-- grid grid-cols-2;
+        flex flex-col items-start jusitfy-center text-center;
+        no tailwind é certo usar rem(px/4); 2rem = 2 . 0.25; 4rem = 4 . 0.25rem;
+        no tailwind segue essa ordem na class propriedade-valor;
+        para margin = m-(numero) = element.class/id {margin: (numero)}; mr = margin right; ml = margin-left; mt = margin top; mb = margin-bottom -->
+        <h1 class="text-[var(--main-color)] text-lg md:text-2xl lg:text-4xl underline font-bold tracking-widest"> <!-- md - 768px pra cima ate 1023 ; sm - 767px pra baixo; -->
+            Hello Tailwind!
+        </h1>
+        <p class="text-yellow-200 md:text-2xl lg:text-4xl">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque provident voluptate quia optio vitae 
+            et suscipit blanditiis aspernatur ducimus harum fuga saepe ex voluptatum fugit repellat, voluptatibus dicta, atque aperiam.
+        </p>
+        <div class="sec text-gray-700 h-screen w-[70%] mx-40 my-12 p-10 hover:text-[var(--main-color)] hover:bg-purple-300 pt-80 bg-blue-500 rounded-xl">
+            <h2 class="text-center">Hello World</h2>
+        </div>  <!-- tmb tem min e max width -->
+    </div>
+</body>
+</html>

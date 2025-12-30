@@ -1,0 +1,16 @@
+
+:root {
+        --main-color: #dfdfdf;
+        --black: #212121de;
+}
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--preto);
+        box-sizing: border-box;
+}
+    
+    .main {
+        background: rgb(110, 110, 110);
+        border-radius: 10px;
+}
